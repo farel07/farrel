@@ -27,6 +27,12 @@ class Kalkulator
         if ($this->cek_daya()) {
             return;
         }
+
+        if ($a1 + $a2 > 1000000) {
+            echo "Nilai diluar batas yang ditentukan || daya sekarang : $this->daya";
+            return;
+        }
+
         echo $a1 + $a2 . " || daya sekarang : $this->daya";
     }
     public function pengurangan($a1, $a2)
@@ -34,6 +40,12 @@ class Kalkulator
         if ($this->cek_daya()) {
             return;
         }
+
+        if ($a1 - $a2 > 1000000) {
+            echo "Nilai diluar batas yang ditentukan || daya sekarang : $this->daya";
+            return;
+        }
+
         echo $a1 - $a2 . " || daya sekarang : $this->daya";
     }
     public function perkalian($a1, $a2)
@@ -41,6 +53,12 @@ class Kalkulator
         if ($this->cek_daya()) {
             return;
         }
+
+        if ($a1 * $a2 > 1000000) {
+            echo "Nilai diluar batas yang ditentukan || daya sekarang : $this->daya";
+            return;
+        }
+
         echo $a1 * $a2 . " || daya sekarang : $this->daya";
     }
     public function penjpembagianumlahan($a1, $a2)
@@ -48,6 +66,12 @@ class Kalkulator
         if ($this->cek_daya()) {
             return;
         }
+
+        if ($a1 / $a2 > 1000000) {
+            echo "Nilai diluar batas yang ditentukan || daya sekarang : $this->daya";
+            return;
+        }
+
         echo $a1 / $a2 . " || daya sekarang : $this->daya";
     }
 }
@@ -59,7 +83,7 @@ class kalkulator_hemat extends Kalkulator
 
 $kalkulator1 = new Kalkulator();
 $kalkulator1->isi_daya(50);
-$kalkulator1->penjumlahan(20, 15);
+$kalkulator1->penjumlahan(1000000, 15);
 echo "<br>";
 $kalkulator2 = new kalkulator_hemat();
 $kalkulator2->isi_daya(50);
